@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::before,
+*,
+*::after {
+  box-sizing: border-box;
+  font-family: "Geist", sans-serif;
+  margin: 0;
+}
+
+:root {
+  --slate-900: 5, 5, 5;
+  --slate-800: 29, 29, 29;
+  --magenta-500: 245, 26, 187;
+  --slate-100: 255, 255, 255;
+
+  --rounded-sm: 0.25rem;
+  --rounded-md: 0.5rem;
+
+  --primary-px: clamp(1rem, 7.5vw, 16rem);
+
+  --text-md: clamp(0.75rem, 5vw, 1rem);
+  --text-xl: clamp(0.75rem, 5vw, 1.5rem);
+  --text-3xl: clamp(1rem, 5vw, 2rem);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: color-mix(
+    in srgb,
+    25% rgb(var(--magenta-500)),
+    transparent
+  );
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #4b4b4b #929292;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.375rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #4b4b4b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #929292;
+  border-radius: 0.625rem;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/src/assets/geist.ttf");
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgb(var(--slate-900));
+  color: rgb(var(--slate-100));
+  letter-spacing: -0.0313rem;
+  line-height: 1.1;
+  padding-inline: var(--primary-px);
+  overflow-x: hidden;
+}
+
+a,
+a:visited {
+  color: unset;
+  text-decoration: none;
+}
